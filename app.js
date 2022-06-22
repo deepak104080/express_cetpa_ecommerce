@@ -1,9 +1,16 @@
 const express = require('express');
 const colors = require('colors');
 const bodyParser = require('body-parser');
+const reqFilter = require('./middleware/middleware_age');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+
+//middleware on all routes
+// app.use(reqFilter);
+app.use(cors());
+
 
 app.get('/', (req, res) => {
     res.send('My First Express Page...');
@@ -12,12 +19,12 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/about', (req, res) => {
+app.get('/about', reqFilter, (req, res) => {
     console.log(colors.red('My About Page...'));
     res.send('<h2>My About Page</h2><h2>My About Page</h2><h2>My About Page</h2><h2>My About Page</h2><h2>My About Page</h2><h2>My About Page</h2>');
 })
 
-app.get('/contactdata', (req, res) => {
+app.get('/contactdata', reqFilter, (req, res) => {
     console.log(colors.red('My contact data...'));
     const tempObj = {
         name: 'test',
@@ -44,6 +51,23 @@ app.get('/staticpage1', (req, res) => {
     console.log('staticpage1 rendering route...');
     res.sendFile(`${publicPath}/staticpage1.html`)
 })
+
+
+
+
+app.set('view engine', 'ejs');
+
+app.get('/ejspage1', (req, res) => {
+    const data = {
+        name: 'test',
+        city: 'testcity',
+        pincode: 123123
+    }
+    //take data from model/database and pass to view
+    res.render('ejspage1', {data});
+})
+
+
 
 
 

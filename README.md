@@ -26,6 +26,7 @@ router.use - same as app.use
 
 req.body - to access data passed with api
 req.params - url parameter of the request
+req.query - to handle all query parameters
 req.ip - to access request ip
 req.method - access type of request
 req.query - handle query parameters of the url
