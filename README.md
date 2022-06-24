@@ -48,3 +48,22 @@ res.status - return http status code
 templating
 middleware
 database
+
+
+
+
+
+cluster -> project -> database -> table
+
+user - userid and password
+
+user - access on  database
+
+
+Online MongoDB Atlas - 
+https://www.mongodb.com/atlas/database
+https://cloud.mongodb.com/
+
+
+Mongoose commands
+mongoose.connect - connect database

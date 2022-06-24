@@ -3,6 +3,7 @@ const colors = require('colors');
 const bodyParser = require('body-parser');
 const reqFilter = require('./middleware/middleware_age');
 const cors = require('cors');
+const mongoose = require('mongoose');
 
 const app = express();
 app.use(bodyParser.json());
@@ -43,6 +44,7 @@ app.use('/products', productsRoute);
 
 
 const path = require('path');
+const { hostname } = require('os');
 const publicPath = path.join(__dirname, 'public' );
 app.use(express.static(publicPath));
 
@@ -70,5 +72,9 @@ app.get('/ejspage1', (req, res) => {
 
 
 
+mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mongodb.net/ecommerce?retryWrites=true&w=majority', {useNewUrlParser: true}, () => {
+    console.log('MongoDB Atlas connected...')
+})
+// hostname, databasename, username, password
 
 app.listen(4000);
