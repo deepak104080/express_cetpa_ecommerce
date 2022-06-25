@@ -67,3 +67,66 @@ https://cloud.mongodb.com/
 
 Mongoose commands
 mongoose.connect - connect database
+schmea - save - insert into table
+        find - retrieve from table
+
+
+
+------------------------------------------------------
+List of API
+
+
+
+
+POST add product - - *****http://localhost:4000/products/
+GET - *****http://localhost:4000/products
+        *****http://localhost:4000/products/id123
+        http://localhost:4000/products/searchProduct?price=2000
+DELETE - http://localhost:4000/products/id123
+PUT - http://localhost:4000/products/updatePrice
+
+
+
+SignUp
+Login
+POST - user registration
+GET - user login check
+
+
+
+
+Cart 
+POST - add to cart
+PUT - update cart
+DELETE - clear cart
+GET - list of all products in cart
+
+
+
+Orders
+POST - create order
+GET - list of orders
+GET - details of the order
+
+
+
+Tables
+products
+category and subcategory
+users
+cart - cart and cartdetails
+orders - orders and orderdetails
+
+---------------------------------------------------
+SQL - 
+INSERT INTO tablename (FIELDS) VALUES
+SELECT * (PRODUCTID, PRODUCTNAME) FROM tablename WHERE productid = id123
+
+
+
+Structured
+Oracle, MS SQL, MySQL, Postgres, RDS
+
+
+Non Structured
+Mongodb, Cassandra, DynamoDB
