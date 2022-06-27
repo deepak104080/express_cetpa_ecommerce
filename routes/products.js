@@ -5,8 +5,9 @@ const router = express.Router();
 
 var colors = require('colors');
 
-
+//get api for all search
 router.get('/', async (req, res) => {
+    console.log('inside get api call.')
     try{
         const productslist = await Products.find();
         console.log(productslist);
@@ -20,7 +21,7 @@ router.get('/', async (req, res) => {
     
 })
 
-
+//get api for search with price
 router.get('/searchProduct', async (req, res) => {
     try{
         console.log('------------abcsearchProduct - ', req.query.price);
@@ -35,7 +36,7 @@ router.get('/searchProduct', async (req, res) => {
     
 })
 
-
+//get api for search with id
 router.get('/:id', async (req, res) => {
     try{
         console.log(req.params.id);
@@ -52,7 +53,7 @@ router.get('/:id', async (req, res) => {
 
 
 
-
+//post api to save data
 router.post('/', async (req, res) => {
     console.log(colors.bgYellow('Req Object in products api - ', req.body));
     //save this data in database

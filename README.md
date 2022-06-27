@@ -80,10 +80,15 @@ List of API
 
 POST add product - - *****http://localhost:4000/products/
 GET - *****http://localhost:4000/products
+        *****http://localhost:4000/products/categoryname - to build
         *****http://localhost:4000/products/id123
         http://localhost:4000/products/searchProduct?price=2000
 DELETE - http://localhost:4000/products/id123
 PUT - http://localhost:4000/products/updatePrice
+
+
+POST - USER
+
 
 
 

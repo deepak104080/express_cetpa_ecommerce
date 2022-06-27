@@ -42,6 +42,9 @@ app.get('/contactdata', reqFilter, (req, res) => {
 const productsRoute = require('./routes/products');
 app.use('/products', productsRoute);
 
+const usersRoute = require('./routes/users');
+app.use('/users', usersRoute);
+
 
 const path = require('path');
 const { hostname } = require('os');
