@@ -98,6 +98,10 @@ POST - user registration
 GET - user login check
 
 
+Registration - POST - add user
+User Login - GET(details)
+Auth0/JWT
+
 
 
 Cart 
