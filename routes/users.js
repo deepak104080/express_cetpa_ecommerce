@@ -51,7 +51,7 @@ router.post('/adduser', async(req, res) => {
     console.log('inside user add api')
     try{
         const user = new Users({
-            userid: req.body.userid,
+            userid: parseInt(Math.random()*100000000),
             username: req.body.username,
             name: req.body.name,
             email: req.body.email,
