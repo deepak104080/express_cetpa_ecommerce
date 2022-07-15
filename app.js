@@ -45,6 +45,9 @@ app.use('/products', productsRoute);
 const usersRoute = require('./routes/users');
 app.use('/users', usersRoute);
 
+const ordersRoute = require('./routes/orders');
+app.use('/orders', ordersRoute);
+
 
 const path = require('path');
 const { hostname } = require('os');
