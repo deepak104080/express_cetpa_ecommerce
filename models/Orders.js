@@ -37,7 +37,8 @@ const OrdersSchema = mongoose.Schema({
         type: String
     },
     paymentstatus: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     orderstatus: {
         type: String,
