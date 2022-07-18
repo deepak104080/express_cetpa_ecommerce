@@ -31,7 +31,7 @@ router.post('/placeorder', async (req, res) => {
 })
 
 
-
+//API 8
 router.get('/allorders', async(req, res) => {
     try{
         const response = await Orders.find();
@@ -42,7 +42,7 @@ router.get('/allorders', async(req, res) => {
     }
 })
 
-
+//API 9
 router.get('/orderbyuser/:username', async(req, res) => {
     try{
         const tempUserName = req.params.username;
@@ -54,6 +54,7 @@ router.get('/orderbyuser/:username', async(req, res) => {
     }
 })
 
+//API 10
 router.get('/orderbyorder/:orderid', async(req, res) => {
     try{
         const tempOrderId = req.params.orderid;
