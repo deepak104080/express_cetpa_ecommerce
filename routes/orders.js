@@ -23,6 +23,8 @@ router.post('/placeorder', async (req, res) => {
         const response = await tempOrder.save();
         //console.log('inside placeorder api response - ', response)
         res.status(201).json(response);
+
+        //*****store details in order details table
     }
     catch(err) {
         //console.log('inside placeorder api error - ', err)

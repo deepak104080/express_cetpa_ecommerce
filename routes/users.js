@@ -36,7 +36,11 @@ router.post('/login', async (req, res) => {
         else if(response.length == 1) {
             //allow login
             //session//jwt - rest
-            res.status(200).json(response);
+            // let obj = Object.assign(response[0]);
+            let obj = {key: 12345};
+            obj = {...obj, ...response[0]._doc};
+            response[0].token = 12345;
+            res.status(200).json(obj);
         }
         else{
             res.status(400).json({message: 'Duplicate User'})
