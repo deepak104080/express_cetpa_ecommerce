@@ -33,7 +33,20 @@ router.get('/searchProduct', async (req, res) => {
     catch(err){
         res.status(400).json({message: err.message});
     }
-    
+})
+
+//get api for search with category
+router.get('/category/:category', async (req, res) => {
+    try{
+        // console.log('------------abcsearchProduct - ', req.params.category);
+        let tempCategory = req.params.category;
+        const productslist = await Products.find({category: tempCategory});
+        // console.log(productslist);
+        res.status(201).json(productslist);
+    }
+    catch(err){
+        res.status(400).json({message: err.message});
+    }
 })
 
 //get api for search with id
