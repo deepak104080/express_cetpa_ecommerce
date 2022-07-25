@@ -2,6 +2,7 @@ const { json } = require('body-parser');
 const { application } = require('express');
 const express = require('express');
 const Users = require('../models/Users');
+const jwt = require('jsonwebtoken');
 
 
 const router = express.Router();
@@ -37,9 +38,11 @@ router.post('/login', async (req, res) => {
             //allow login
             //session//jwt - rest
             // let obj = Object.assign(response[0]);
-            let obj = {key: 12345};
+            let obj = {};
+            obj.token = jwt.sign({username: 'deepak123'}, "altudo", {
+                expiresIn: 600
+            });
             obj = {...obj, ...response[0]._doc};
-            response[0].token = 12345;
             res.status(200).json(obj);
         }
         else{

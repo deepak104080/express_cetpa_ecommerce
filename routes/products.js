@@ -6,6 +6,7 @@ const router = express.Router();
 var colors = require('colors');
 
 //get api for all search
+//http://localhost:8000/products
 router.get('/', async (req, res) => {
     console.log('inside get api call.')
     try{

@@ -1,11 +1,30 @@
 const express = require('express');
 const Orders = require('../models/Orders');
+const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 
+const verifyJwt = (req, res, next) => {
+    const token = req.headers["x-access-token"];
+
+    if(!token) {
+        res.status(400).json({err: 'Token Missing'});
+    }
+    else {
+        jwt.verify(token, "altudo", (err, decoded) => {
+            if(err) {
+                res.status(400).json({err: 'Invaid Token'});
+            }
+            else {
+                //validated user
+                next();
+            }
+        })
+    }
+}
 
 // http://localhost:4000/orders/placeorder
-router.post('/placeorder', async (req, res) => {
+router.post('/placeorder', verifyJwt, async (req, res) => {
     // console.log('inside placeorder api - ', req.body);
     try{
         const tempOrder = new Orders({
