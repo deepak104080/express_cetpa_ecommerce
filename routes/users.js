@@ -69,7 +69,7 @@ router.post('/login', async (req, res) => {
 })
 
 
-
+// http://localhost:4000/users/adduser
 router.post('/adduser', async(req, res) => {
     console.log('inside user add api')
     try{
