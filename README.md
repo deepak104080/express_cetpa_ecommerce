@@ -1,6 +1,6 @@
-Express - NodeJS Framework
+# Express - NodeJS Framework
 
-Web Application (API Development)
+## Web Application (API Development)
 
 
 
@@ -60,12 +60,12 @@ user - userid and password
 user - access on  database
 
 
-Online MongoDB Atlas - 
+**Online MongoDB Atlas -**
 https://www.mongodb.com/atlas/database
 https://cloud.mongodb.com/
 
 
-Mongoose commands
+**Mongoose commands**
 mongoose.connect - connect database
 schmea - save - insert into table
         find - retrieve from table
@@ -75,7 +75,7 @@ schmea - save - insert into table
 ------------------------------------------------------
 ---------------------------------------------------
 ---------------------------------------------------
-List of API
+**List of API**
 
 
 
@@ -142,3 +142,22 @@ Oracle, MS SQL, MySQL, Postgres, RDS
 
 Non Structured
 Mongodb, Cassandra, DynamoDB
+
+
+
+
+-----------------------------------------
+## Deployment on Heroku
+
+step 1 - account on heroku
+step 2 - install heroku cli
+
+
+npm install -g heroku
+heroku --version
+
+
+step 3 - git repor, all files added, commited pushed to branch - master
+
+heroku create
+git push heroku master
