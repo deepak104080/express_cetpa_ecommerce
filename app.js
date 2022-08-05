@@ -83,4 +83,4 @@ mongoose.connect('mongodb+srv://testuser001:z9xsFuktzYAs4fMk@cluster0.2eq41.mong
 })
 // hostname, databasename, username, password
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
