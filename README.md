@@ -158,9 +158,14 @@ npm install -g heroku
 heroku --version
 
   
-step 3 - git repor, all files added, commited pushed to branch - master  
+step 3 - git repo, all files added, commited pushed to branch - master  
 
 heroku login
 
 heroku create  
 git push heroku master  
+
+
+**Later Updations**
+step 1 - git repo, all files added, commited pushed to branch - master
+step 2 - git push heroku master 
