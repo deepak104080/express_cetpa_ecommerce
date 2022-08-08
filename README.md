@@ -160,5 +160,7 @@ heroku --version
   
 step 3 - git repor, all files added, commited pushed to branch - master  
 
+heroku login
+
 heroku create  
 git push heroku master  
